@@ -15,7 +15,7 @@ function setup() {
 
 function refresh(){
   rotAngle = 0;
-  n = int(random(12, 14));
+  n = int(random(12, 20));
   p = [];
   for (var i = 0; i < n; i++) {
     var ang = lerp(0, TWO_PI, i / n);
