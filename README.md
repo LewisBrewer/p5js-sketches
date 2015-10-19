@@ -1,22 +1,23 @@
-#### sketches to add
+collection of p5js sketches.
+
+#### To add
 
  - Self-Organizing-Map
  - Vertex Rivers
+ - Conways game of life
+ - Delaunay
 
- - p5js-sandbox sketches
- - OpenProcessing
-
- - fix multiscale turing + (living.pde)
- - pixel_knitting
- - ScatteredLetters
-
- - other algorithms, delaunay
-
-#### when 3d
-
- - Flocking
+3d examples to add
+ - Flocking (adapt from Shiffman?)
  - Cubes
  - Seashells
 
 
-contribute examples -- transformations
+#### Fix
+
+ - multiscale turing
+ - pixel_knitting
+ - ScatteredLetters
+
+
+
