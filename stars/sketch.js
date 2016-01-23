@@ -1,6 +1,6 @@
 var n;
-var p = [];
-var s = [];
+var p;
+var s;
 
 function setup() {
   createCanvas(800, 800);
@@ -17,9 +17,10 @@ function draw() {
   } 
   while (n % s[2] === 0);
 
+  p = [];
   for (var i = 0; i < n; i++) {
     var ang = lerp(0, TWO_PI, i / n);
-    p.push( [ 300 * cos(ang), 300 * sin(ang) ] );
+    p.push({x: 300 * cos(ang), y:300 * sin(ang)});
   }  
   
   background(255);   
@@ -30,12 +31,12 @@ function draw() {
     var i3 = (i1 + s[1]) % n;
     var i4 = (i1 + s[2]) % n;
     beginShape();
-      curveVertex(p[i1][0], p[i1][1]);
-      curveVertex(p[i2][0], p[i2][1]);
-      curveVertex(p[i3][0], p[i3][1]);
-      curveVertex(p[i4][0], p[i4][1]);
+      curveVertex(p[i1].x, p[i1].y);
+      curveVertex(p[i2].x, p[i2].y);
+      curveVertex(p[i3].x, p[i3].y);
+      curveVertex(p[i4].x, p[i4].y);
     endShape(CLOSE);
-    bezier(p[i1][0], p[i1][1], p[i2][0], p[i2][1], p[i3][0], p[i3][1], p[i4][0], p[i4][1] );
+    bezier(p[i1].x, p[i1].y, p[i2].x, p[i2].y, p[i3].x, p[i3].y, p[i4].x, p[i4].y);
     i1 = i3;
   } 
   while (i1 !== 0); 

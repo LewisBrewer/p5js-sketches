@@ -30,7 +30,7 @@ function setup(){
   backgroundCol = color(200);
 
 
-  createCanvas(1000, 700);
+  createCanvas(500, 500);
   smooth();
   background(backgroundCol);
   noFill();

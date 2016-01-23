@@ -1,10 +1,13 @@
 var n;
 var circles = [];
 
+// this doesn't look right -- initial circles could be bigger
+
+
 function setup() {
   createCanvas(800, 800);
   smooth();
-  noLoop();
+  //noLoop();
   
   n = 1600;
   
@@ -14,14 +17,17 @@ function setup() {
   circles.push(new Circ(width/2, -10, 20));
   circles.push(new Circ(width/2, height+10, 20));
   
-  for (var i=0; i<n; i++) {
-    circles.push(new Circ());  
-  }
+  //for (var i=0; i<n; i++) {
+    //circles.push(new Circ());  
+  //}
 }
 
 function draw() {
+  if (circles.length < n) {
+    circles.push(new Circ());  
+  }
+  
   background(255);
-  var idx = 0;
   for (var i=0; i<circles.length; i++) {
     circles[i].draw();
   }
@@ -38,7 +44,7 @@ function Circ(x_, y_, r_) {
       done = true;
       this.x = random(width);
       this.y = random(height);
-      this.r = 6;
+      this.r = 1;
       
       minDist = width;
       for (var i=0; i<circles.length; i++) {

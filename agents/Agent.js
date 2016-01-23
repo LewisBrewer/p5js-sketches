@@ -1,4 +1,4 @@
-	function Agent()
+function Agent()
 {
   this.p = {x:random(width), y:random(height)};
   this.v = {x:random(-1,1), y:random(-1,1)};
